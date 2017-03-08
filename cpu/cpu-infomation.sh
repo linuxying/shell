@@ -20,6 +20,9 @@ logical_cpu=`grep 'processor' /proc/cpuinfo |wc -l`
 #cpu型号和主频信息
 model_cpu=`grep 'model name' /proc/cpuinfo |uniq|awk -F ":" '{print $2}'`
 
+#cpu负载信息
+cpuload=`uptime |awk -F ": " '{print $2}'`
+
 echo 
 echo -e "\033[32mCpu  information:\033[0m"
 echo -e "\033[32m    check time:   =  $DATE                   \033[0m" 
@@ -27,4 +30,5 @@ echo -e "\033[32m    Physical cpu: =  ${phy_cpu}              \033[0m"
 echo -e "\033[32m    cpu cores:    =  ${cores_cpu}            \033[0m"
 echo -e "\033[32m    locical cpu:  =  ${logical_cpu}          \033[0m"
 echo -e "\033[32m    model cpu:    = ${model_cpu}             \033[0m"
+echo -e "\033[32m    cpu load:     =  ${cpuload}              \033[0m"
 echo 
