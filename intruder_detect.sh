@@ -3,8 +3,7 @@
 # Email : 512331228@qq.com
 # Last modified :2017-03-28 13:58
 # Filename :intruder_detect.sh
-# Description :入侵检测脚本，检查日志文件中一定时间内登陆用户的情况
-
+# Description :入侵检测脚本，检查日志文件中一定时间内合法用户登陆情况
 #定义默认日志文件
 AUTHLOG=/var/log/secure
 
