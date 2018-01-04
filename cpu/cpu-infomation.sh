@@ -1,7 +1,4 @@
 #!/bin/bash
-# Author : Linuxliu
-# Email : 512331228@qq.com
-# Last modified :2017-03-08 21:38
 # Filename :cpu-monitor.sh
 # Description :整合了可以查看cpu信息的命令
 
@@ -24,11 +21,11 @@ model_cpu=`grep 'model name' /proc/cpuinfo |uniq|awk -F ":" '{print $2}'`
 cpuload=`uptime |awk -F ": " '{print $2}'`
 
 echo 
-echo -e "\033[32mCpu  information:\033[0m"
-echo -e "\033[32m    check time:   =  $DATE                   \033[0m" 
-echo -e "\033[32m    Physical cpu: =  ${phy_cpu}              \033[0m" 
-echo -e "\033[32m    cpu cores:    =  ${cores_cpu}            \033[0m"
-echo -e "\033[32m    locical cpu:  =  ${logical_cpu}          \033[0m"
-echo -e "\033[32m    model cpu:    = ${model_cpu}             \033[0m"
-echo -e "\033[32m    cpu load:     =  ${cpuload}              \033[0m"
+echo -e "\033[32mCpu 信息:\033[0m"
+echo -e "\033[32m    检查时间:    =  $DATE                   \033[0m" 
+echo -e "\033[32m    物理cpu数:   =  ${phy_cpu}              \033[0m" 
+echo -e "\033[32m    每个cpu核数: =  ${cores_cpu}            \033[0m"
+echo -e "\033[32m    逻辑cpu数:   =  ${logical_cpu}          \033[0m"
+echo -e "\033[32m    cpu型号:     = ${model_cpu}             \033[0m"
+echo -e "\033[32m    cpu负载:     =  ${cpuload}              \033[0m"
 echo 
